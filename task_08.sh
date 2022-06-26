@@ -21,6 +21,7 @@ curl -o coins.json -X 'GET' \
 -H 'accept: application/json' &> /dev/null
 
 grep -i error coins.json &> /dev/null
+
 if [[ $? -ne 0 ]]
 then
 	printf "${CYAN}\n\tRank\tName\t\t\tSymbol\t\tCurrent Price (USD)\n${NC}"
